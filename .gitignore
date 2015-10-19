@@ -3,6 +3,7 @@
 /.idea
 /.idea/
 .idea
+.idea/
 Homestead.yaml
 Homestead.json
 .env

@@ -29,6 +29,6 @@ $factory->define('App\Post', function ($faker) {
 
 $factory->define('App\Tag', function ($faker) {
     return [
-        'tag' => $faker->word
+        'name' => $faker->word
     ];
 });
