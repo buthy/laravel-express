@@ -13,7 +13,12 @@
 
 Route::get('/', 'PostsController@index');
 
-Route::group(['prefix' => 'admin'], function() {
+Route::controllers([
+    'auth' => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController'
+]);
+
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
 
     Route::group(['prefix' => 'posts'], function() {
 

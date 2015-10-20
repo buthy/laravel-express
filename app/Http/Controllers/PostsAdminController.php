@@ -44,7 +44,7 @@ class PostsAdminController extends Controller
     public function update($id, PostRequest $request)
     {
         $this->post->find($id)->update($request->all());
-        $post = $this->postModel->find($id);
+        $post = $this->post->find($id);
         $post->tags()->sync($this->getTagsIds($request->tags));
         return redirect()->route('admin/posts/index');
     }

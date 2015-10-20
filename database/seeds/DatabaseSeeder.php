@@ -15,6 +15,15 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
         DB::statement('SET foreign_key_checks = 0');
 
+        factory('App\User')->create(
+            [
+                'name' => 'Marcus',
+                'email' => 'buthy88@gmail.com',
+                'password' => bcrypt('123456'),
+                'remember_token' => str_random(10),
+            ]
+        );
+
         $this->call('PostsTableSeeder');
         $this->call('TagTableSeeder');
 
