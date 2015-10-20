@@ -1,7 +1,7 @@
 @extends('template')
 
 @section('title')
-	Inicial
+	Bem-vindo
 @endsection
 
 @section('content')
@@ -13,6 +13,8 @@
 
 				<div class="panel-body">
 					You are logged in!
+					<br>
+					Click <a href="/">here</a> to go to the main page!
 				</div>
 			</div>
 		</div>

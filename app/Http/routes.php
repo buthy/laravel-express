@@ -12,6 +12,10 @@
 */
 
 Route::get('/', 'PostsController@index');
+Route::get('/home', function()
+{
+    return view('home');
+});
 
 Route::controllers([
     'auth' => 'Auth\AuthController',
